@@ -6,14 +6,8 @@ class Swiftlintcustom < Formula
 
   depends_on :xcode => ["7.1", :build]
 
-  bottle do
-    cellar :any
-    sha256 "02c38d260d1f3bb728dd372fffe614ce472b38ad" => :el_capitan
-    sha256 "02c38d260d1f3bb728dd372fffe614ce472b38ad" => :yosemite
-  end
-
   def install
-    bin.install "swiftlint"
+    bin.install "swiftlintcustom"
     system "make", "prefix_install", "PREFIX=#{prefix}", "TEMPORARY_FOLDER=#{buildpath}/SwiftLint.dst"
   end
 

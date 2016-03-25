@@ -13,7 +13,7 @@ class Swiftlintcustom < Formula
 #  end
 
   def install
-    bin.install "swiftlintcustom"
+    bin.install "swiftlintcustomkeg"
     system "make", "prefix_install", "PREFIX=#{prefix}", "TEMPORARY_FOLDER=#{buildpath}/SwiftLint.dst"
   end
 

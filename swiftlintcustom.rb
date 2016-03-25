@@ -8,7 +8,7 @@ class Swiftlintcustom < Formula
 
   def install
     bin.install "swiftlintcustom"
-    #system "make", "prefix_install", "PREFIX=#{prefix}", "TEMPORARY_FOLDER=#{buildpath}/SwiftLint.dst"
+    system "make", "prefix_install", "PREFIX=#{prefix}", "TEMPORARY_FOLDER=#{buildpath}/SwiftLint.dst"
   end
 
   test do

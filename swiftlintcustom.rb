@@ -7,12 +7,12 @@ class Swiftlintcustom < Formula
   depends_on :xcode => ["7.1", :build]
 
   def install
-    bin.install "swiftlintcustom"
+    bin.install "swiftlintcustomkeg"
     system "make", "prefix_install", "PREFIX=#{prefix}", "TEMPORARY_FOLDER=#{buildpath}/SwiftLint.dst"
   end
 
   test do
     (testpath/"Test.swift").write "import Foundation\n"
-    system "#{bin}/swiftlint"
+    system "#{bin}/swiftlintcustom"
   end
 end

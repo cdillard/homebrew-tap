@@ -7,7 +7,6 @@ class Swiftlint < Formula
   depends_on :xcode => ["7.1", :build]
 
   def install
-    bin.install "swiftlint"
     system "make", "prefix_install", "PREFIX=#{prefix}", "TEMPORARY_FOLDER=#{buildpath}/SwiftLint.dst"
   end
 
